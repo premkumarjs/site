@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- @toDo - Mangalam Software solutions to be changed as proper company name -->
+
+<head>
+    <!-- SEO Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mangalam Software solutions provides innovative software solutions for modern businesses. Explore our services, expertise, and client testimonials.">
+    <meta name="keywords" content="software company, web development, cloud services, business solutions, technology">
+    <meta name="author" content="Mangalam Software solutions">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.Mangalam Software solutions.com">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Mangalam Software solutions - Innovative Software Solutions">
+    <meta property="og:description"
+        content="Mangalam Software solutions provides cutting-edge software solutions for modern businesses. Explore our services and expertise.">
+    <meta property="og:image" content="https://www.Mangalam Software solutions.com/images/logo.png">
+    <meta property="og:url" content="https://www.Mangalam Software solutions.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mangalam Software solutions - Innovative Software Solutions">
+    <meta name="twitter:description"
+        content="Mangalam Software solutions provides cutting-edge software solutions for modern businesses. Explore our services and expertise.">
+    <meta name="twitter:image" content="https://www.Mangalam Software solutions.com/images/logo.png">
+
+    <!-- Title -->
+    <title>Mangalam Software Solutions</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Custom Styles and Ball Animations -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #ffffff, #e3f2fd);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-testimonal {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+        }
+
+        .card-testimonal:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .ball {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(0, 123, 255, 0.6);
+            /* Fallback color */
+            animation: float 5s infinite ease-in-out, color-change 3s infinite ease-in-out alternate;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+                /* Smooth upward motion */
+            }
+
+            100% {
+                transform: translateY(0);
+                /* Returns to the original position */
+            }
+        }
+
+        @keyframes color-change {
+            0% {
+                background: rgba(0, 123, 255, 0.6);
+            }
+
+            50% {
+                background: rgb(88, 169, 255);
+            }
+
+            100% {
+                background: rgba(0, 123, 255, 0.833);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(120deg, #007bff, #00bfff);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Smooth Transition for Icons */
+        .bi-people-fill,
+        .bi-heart-fill,
+        .bi-lightbulb-fill {
+            transition: color 0s ease;
+        }
+
+        .card:hover .bi-people-fill {
+            color: #3700ff !important;
+            ;
+        }
+
+        .card:hover .bi-heart-fill {
+            color: #ff031c !important;
+        }
+
+        .card:hover .bi-lightbulb-fill {
+            color: #ffc107 !important;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Custom Carousel Control Buttons */
+        .carousel-control-prev,
+        .carousel-control-next {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 123, 255, 0.8);
+            border-radius: 50%;
+            margin: 20px auto;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card {
+            padding: 30px 0 30px 0;
+            background: #ffffff !important;
+        }
+
+        /* Footer */
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Sticky Navigation Bar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .content {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+            /* Faster fade-in */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <!-- Ball Animations -->
+        <div class="ball" style="top: 26%; left: 10%; animation-delay: 1s;"></div>
+        <div class="ball" style="top: 40%; left: 96%; animation-delay: 1s;"></div>
+        <div class="ball" style="top: 50%; left: 30%; animation-delay: 1s;"></div>
+        <div class="ball" style="top: 72%; left: 50%; animation-delay: 1s;"></div>
+        <div class="ball" style="top: 85%; left: 98%; animation-delay: 1s;"></div>
+        <div class="ball" style="top: 95%; left: 32%; animation-delay: 1s;"></div>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Mangalam Software Solutions</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#why-choose-us">Why Choose Us?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1>Welcome to Mangalam Software solutions</h1>
+                        <p>Innovative solutions for modern businesses</p>
+                        <a href="#services" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="hero.svg" alt="Hero Illustration" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container text-center">
+                <h2>Our Services</h2>
+                <p>We provide cutting-edge solutions to help your business thrive.</p>
+                <div class="row mt-4">
+                    <div class="col-md-4 p-3">
+                        <div class="card p-3">
+                            <h4>Custom Software Development</h4>
+                            <p>Tailored software solutions designed to meet your unique business needs.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-3">
+                        <div class="card p-3">
+                            <h4>Web Development</h4>
+                            <p>Responsive and user-friendly websites that drive engagement and conversions.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-3">
+                        <div class="card p-3">
+                            <h4>Mobile App Development</h4>
+                            <p>Innovative mobile applications for iOS and Android platforms.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-3">
+                        <div class="card p-3">
+                            <h4>Cloud Services</h4>
+                            <p>Scalable and secure cloud solutions to enhance your business operations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-3">
+                        <div class="card p-3">
+                            <h4>UI/UX Design</h4>
+                            <p>Intuitive and visually appealing designs that enhance user experience.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-3">
+                        <div class="card p-3">
+                            <h4>IT Consulting</h4>
+                            <p>Expert advice and strategies to optimize your IT infrastructure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us" id="why-choose-us">
+            <div class="container text-center">
+                <h2>Why Choose Us?</h2>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="card p-3 text-center">
+                            <i class="bi bi-people-fill fs-1 text-primary"></i>
+                            <h4>Expert Team</h4>
+                            <p>Our experienced professionals ensure top-notch solutions tailored to your needs.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 text-center">
+                            <i class="bi bi-heart-fill fs-1 text-primary"></i>
+                            <h4>Customer-Centric Approach</h4>
+                            <p>We prioritize client satisfaction and provide dedicated support for your success.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-3 text-center">
+                            <i class="bi bi-lightbulb-fill fs-1 text-primary"></i>
+                            <h4>Innovative Solutions</h4>
+                            <p>We use the latest technology to deliver scalable, efficient, and secure solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="container text-center">
+                <h2>What Our Clients Say</h2>
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card-testimonal p-3">
+                                <p>"Mangalam Software solutions transformed our business with their top-notch web
+                                    solutions.
+                                    Highly
+                                    recommended!"</p>
+                                <h5>- Jane Doe, CEO of TechCorp</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-testimonal p-3">
+                                <p>"Amazing cloud services that improved our efficiency and scalability!"</p>
+                                <h5>- John Smith, Founder of CloudWorks</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-testimonal p-3">
+                                <p>"The mobile app developed by Mangalam Software solutions has significantly boosted
+                                    our
+                                    customer
+                                    engagement."</p>
+                                <h5>- Sarah Johnson, CMO of RetailPro</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Customized Carousel Controls -->
+                    <div class="d-flex justify-content-center mt-2">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container text-center">
+                <h2>Contact Us</h2>
+                <p>We would love to hear from you!
+                    <br>
+                    Reach out to us for any queries or collaborations.
+                </p>
+                <div class="row d-flex justify-content-center contact-card">
+                    <div class="col-md-6 col-sm-12">
+                        <form class="row g-3 justify-content-center">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Mangalam Software solutions. All rights reserved.</p>
+                <div class="social-links mt-3">
+                    <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-light me-3"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
